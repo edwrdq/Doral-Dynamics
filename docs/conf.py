@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'LemLib'
+project = 'DDX'
 copyright = '2024, Liam Teale'
 author = 'Liam Teale'
 
@@ -32,34 +32,35 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = "furo"
 
 html_theme_options = {
-    "source_repository": "https://github.com/lemlib/lemlib/",
+    "source_repository": "https://github.com/Doral-Dynamics/DDX/",
     "source_branch": "master",
     "source_directory": "docs/",
 
+    # Gruvbox-style red accents
     "light_css_variables": {
-        "color-brand-primary": "#00C852",
-        "color-brand-content": "#00C852",
+        "color-brand-primary": "#cc241d",
+        "color-brand-content": "#cc241d",
     },
 
     "dark_css_variables": {
-        "color-brand-primary": "#00C852",
-        "color-brand-content": "#00C852",
-
+        "color-brand-primary": "#cc241d",
+        "color-brand-content": "#cc241d",
     },
 }
 
 html_static_path = ['_static']
+html_css_files = ['custom.css']
 
 
-breathe_projects = {"LemLib": "xml/"}
+breathe_projects = {"DDX": "xml/"}
 
 breathe_projects_source = {
-    "LemLib" : (
-        "../", ["include/lemlib", "include/lemlib/chassis"]
+    "DDX" : (
+        "../", ["include/ddx"]
     )
 }
 
-breathe_default_project = "LemLib"
+breathe_default_project = "DDX"
 
 myst_enable_extensions = [
     "amsmath",

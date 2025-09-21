@@ -2,67 +2,67 @@
 
 ## Chassis
 
-```{doxygenclass} lemlib::Chassis
+```{doxygenclass} ddx::Chassis
 :members:
 ```
 
 ## Movement Options
 
-```{doxygenstruct} lemlib::TurnToPointParams
+```{doxygenstruct} ddx::TurnToPointParams
 :members:
 ```
 
-```{doxygenstruct} lemlib::TurnToHeadingParams
+```{doxygenstruct} ddx::TurnToHeadingParams
 :members:
 ```
 
-```{doxygenstruct} lemlib::SwingToPointParams
+```{doxygenstruct} ddx::SwingToPointParams
 :members:
 ```
 
-```{doxygenstruct} lemlib::SwingToHeadingParams
+```{doxygenstruct} ddx::SwingToHeadingParams
 :members:
 ```
 
-```{doxygenstruct} lemlib::MoveToPoseParams
+```{doxygenstruct} ddx::MoveToPoseParams
 :members:
 ```
 
-```{doxygenstruct} lemlib::MoveToPointParams
+```{doxygenstruct} ddx::MoveToPointParams
 :members:
 ```
 
 ## Builder Classes
 
-```{doxygenclass} lemlib::TrackingWheel
+```{doxygenclass} ddx::TrackingWheel
 :members:
 ```
 
-```{doxygenclass} lemlib::OdomSensors
+```{doxygenclass} ddx::OdomSensors
 :members:
 ```
 
-```{doxygennamespace} lemlib::Omniwheel
+```{doxygennamespace} ddx::Omniwheel
 ```
 
-```{doxygenclass} lemlib::Drivetrain
+```{doxygenclass} ddx::Drivetrain
 :members:
 ```
 
-```{doxygenclass} lemlib::ControllerSettings
+```{doxygenclass} ddx::ControllerSettings
 :members:
 ```
 
 <!--TODO: figure out whether this should be documented or not-->
 
-```{doxygenclass} lemlib::ExitCondition
+```{doxygenclass} ddx::ExitCondition
 :members:
 ```
 
-```{doxygenclass} lemlib::DriveCurve
+```{doxygenclass} ddx::DriveCurve
 :members:
 ```
 
-```{doxygenclass} lemlib::ExpoDriveCurve
+```{doxygenclass} ddx::ExpoDriveCurve
 :members:
 ```

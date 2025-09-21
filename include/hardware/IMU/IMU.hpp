@@ -2,7 +2,7 @@
 
 #include "units/Angle.hpp"
 
-namespace lemlib {
+namespace ddx {
 class IMU {
     public:
         /**
@@ -83,4 +83,4 @@ class IMU {
     protected:
         Number m_gyroScalar = 1.0;
 };
-} // namespace lemlib
+} // namespace ddx

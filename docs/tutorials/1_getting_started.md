@@ -23,19 +23,19 @@ After the toolchain has been installed, you can create a new PROS project. Selec
 
 To install clangd, repeat the steps to install the PROS extension, but search up `clangd` instead of `PROS`. After it has been installed, open the `main.cpp` file in your project. A notification from clangd will appear in the bottom right stating that it needs to install. Click `install` and wait for it to finish installing. If the notification does not appear, ensure you have clangd installed and reopen `main.cpp`. You have now installed clangd!
 
-## LemLib Installation
+## DDX Installation
 
-To install LemLib, first need to open the PROS integrated terminal. This can be done by clicking on the PROS icon on the left of the screen and clicking `integrated terminal`
+To install DDX, first need to open the PROS integrated terminal. This can be done by clicking on the PROS icon on the left of the screen and clicking `integrated terminal`
 
-Then, copy/paste the following commands into your command line. This will tell PROS where it can find LemLib, and to apply the latest version of LemLib to your project:
+Then, copy/paste the following commands into your command line. This will tell PROS where it can find DDX, and to apply the latest version of DDX to your project:
 ```
-pros c add-depot LemLib https://raw.githubusercontent.com/LemLib/LemLib/depot/stable.json # adds LemLib's stable depot
-pros c apply LemLib # applies latest stable version of LemLib
+pros c add-depot DDX https://raw.githubusercontent.com/Doral-Dynamics/DDX/depot/stable.json # adds DDX stable depot
+pros c apply DDX # applies latest stable version of DDX
 ```
 
 finally, put this at the top of your main.cpp file
 ```c++
-#include "lemlib/api.hpp"
+#include "ddx/ddx.hpp"
 ```
 
-You've now installed LemLib, and you're ready to configure your robot!
+You've now installed DDX, and you're ready to configure your robot!

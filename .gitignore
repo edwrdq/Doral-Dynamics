@@ -28,6 +28,7 @@ docs/package-lock.json
 docs/package.json
 docs/node_modules/
 latex
+.venv
 
 # MacOS
 .DS_Store

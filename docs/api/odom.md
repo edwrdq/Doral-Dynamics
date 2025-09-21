@@ -2,18 +2,18 @@
 
 ## General
 
-```{doxygenfunction} lemlib::update
+```{doxygenfunction} ddx::update
 ```
 
-```{doxygenfunction} lemlib::init
+```{doxygenfunction} ddx::init
 ```
 
 
 ## Pose
 
-```{doxygenclass} lemlib::Pose
+```{doxygenclass} ddx::Pose
 :members:
 ```
 
-```{doxygenfunction} lemlib::format_as
+```{doxygenfunction} ddx::format_as
 ```

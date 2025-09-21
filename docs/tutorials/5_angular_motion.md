@@ -1,11 +1,11 @@
 # 5 - Angular Motions
 
-Turning motions are the simplest motions LemLib can perform. All of the motions will rotate the robot in some way, and only use the angular PID controller.
+Turning motions are the simplest motions DDX can perform. All of the motions will rotate the robot in some way, and only use the angular PID controller.
 
 ## Turn To Heading
 
 ```{seealso}
-{cpp:func}`turnToHeading <lemlib::Chassis::turnToHeading>` and {cpp:class}`TurnToHeadingParams <lemlib::TurnToHeadingParams>` API references.
+{cpp:func}`turnToHeading <ddx::Chassis::turnToHeading>` and {cpp:class}`TurnToHeadingParams <ddx::TurnToHeadingParams>` API references.
 ```
 
 This motion turns the robot to face a certain angle. This angle is absolute, meaning turning the robot to face 90 degrees will always cause the robot to face the same direction. 
@@ -19,7 +19,7 @@ chassis.turnToHeading(270, 4000); // turns the robot to face 270 degrees,
                                   // with a timeout of 4000 ms
 ```
 
-`lemlib::Chassis::turnToHeading()` also has to more optional arguments, which can be used to customize the behavior of the movement.
+`ddx::Chassis::turnToHeading()` also has to more optional arguments, which can be used to customize the behavior of the movement.
 
 The first is `params` which is a `struct` containing named settings, and `async`, which controls whether the movement blocks execution or not.
 
@@ -37,7 +37,7 @@ chassis.turnToHeading(
 ## Turn To Point
 
 ```{seealso}
-{cpp:func}`turnToPoint <lemlib::Chassis::turnToPoint>` and {cpp:class}`TurnToPointParams <lemlib::TurnToPointParams>` API references.
+{cpp:func}`turnToPoint <ddx::Chassis::turnToPoint>` and {cpp:class}`TurnToPointParams <ddx::TurnToPointParams>` API references.
 ```
 
 `turnToPoint` motions work exactly the same as `turnToHeading` motions, except they target a point in Cartesian coordinates on the field, instead of a heading. This is particularly useful if you want to turn to face a game object with a fixed position, regardless if your position on the field.
@@ -58,7 +58,7 @@ Similar to `turnToHeading`, the motion also takes two optional arguments, `param
 ## Swing to Heading
 
 ```{seealso}
-{cpp:func}`swingToHeading <lemlib::Chassis::swingToHeading>` and {cpp:class}`SwingToHeadingParams <lemlib::SwingToHeadingParams>` API references.
+{cpp:func}`swingToHeading <ddx::Chassis::swingToHeading>` and {cpp:class}`SwingToHeadingParams <ddx::SwingToHeadingParams>` API references.
 ```
 
 Swing motions are unique in that they only use half the drivetrain to move.
@@ -82,7 +82,7 @@ As with all the other turn motions `swingToHeading` also takes a `params` and `a
 ## Swing to Point
 
 ```{seealso}
-{cpp:func}`swingToPoint <lemlib::Chassis::swingToPoint>` and {cpp:class}`SwingToPointParams <lemlib::SwingToPointParams>` API references.
+{cpp:func}`swingToPoint <ddx::Chassis::swingToPoint>` and {cpp:class}`SwingToPointParams <ddx::SwingToPointParams>` API references.
 ```
 
 `swingToPoint` works exactly like `swingToHeading`, except it turns to face a point rather than a heading.

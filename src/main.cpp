@@ -2,24 +2,24 @@
 #include "lemlog/logger/sinks/terminal.hpp"
 #include "hardware/Motor/MotorGroup.hpp"
 #include "hardware/IMU/V5InertialSensor.hpp"
-#include "lemlib/tracking/TrackingWheelOdom.hpp"
-#include "lemlib/motions/turnTo.hpp"
+#include "ddx/tracking/TrackingWheelOdom.hpp"
+#include "ddx/motions/turnTo.hpp"
 #include "pros/llemu.hpp"
 
 logger::Terminal terminal;
 
-lemlib::MotorGroup rightDrive({8, 10}, 360_rpm);
-lemlib::MotorGroup leftDrive({-1, 11, -12, 13}, 360_rpm);
+ddx::MotorGroup rightDrive({8, 10}, 360_rpm);
+ddx::MotorGroup leftDrive({-1, 11, -12, 13}, 360_rpm);
 
-lemlib::V5InertialSensor imu(1);
+ddx::V5InertialSensor imu(1);
 
-lemlib::TrackingWheel verticalTracker('E', 'F', true, 2.75_in, 26.5_cm / 2);
-lemlib::TrackingWheel horizontalTracker('G', 'H', false, 2.75_in, -26.5_cm / 2);
+ddx::TrackingWheel verticalTracker('E', 'F', true, 2.75_in, 26.5_cm / 2);
+ddx::TrackingWheel horizontalTracker('G', 'H', false, 2.75_in, -26.5_cm / 2);
 
-lemlib::TrackingWheelOdometry odom({&imu}, {&verticalTracker}, {&horizontalTracker});
+ddx::TrackingWheelOdometry odom({&imu}, {&verticalTracker}, {&horizontalTracker});
 
-lemlib::PID pid(0.05, 0, 0);
-lemlib::ExitCondition<AngleRange> exitCondition(1_stDeg, 2_sec);
+ddx::PID pid(0.05, 0, 0);
+ddx::ExitCondition<AngleRange> exitCondition(1_stDeg, 2_sec);
 
 void initialize() {
     terminal.setLoggingLevel(logger::Level::DEBUG);
@@ -38,10 +38,10 @@ void initialize() {
             pros::delay(10);
         }
     });
-    lemlib::turnTo(90_cDeg, 100_sec, {.slew = 1},
+    ddx::turnTo(90_cDeg, 100_sec, {.slew = 1},
                    {
                        .angularPID = pid,
-                       .exitConditions = std::vector<lemlib::ExitCondition<AngleRange>>({exitCondition}),
+                       .exitConditions = std::vector<ddx::ExitCondition<AngleRange>>({exitCondition}),
                        .poseGetter = [] -> units::Pose { return odom.getPose(); },
                        .leftMotors = leftDrive,
                        .rightMotors = rightDrive,

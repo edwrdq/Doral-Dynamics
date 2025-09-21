@@ -4,7 +4,7 @@
 #include "hardware/Port.hpp"
 #include "pros/adi.hpp"
 
-namespace lemlib {
+namespace ddx {
 /**
  * @brief Encoder implementation for the Optical Shaft Encoder
  *
@@ -135,4 +135,4 @@ class ADIEncoder : public Encoder {
         pros::adi::Encoder m_encoder;
         Angle m_offset = 0_stDeg;
 };
-} // namespace lemlib
+} // namespace ddx

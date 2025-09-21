@@ -79,7 +79,7 @@ void opcontrol() {
 This section is optional and is not needed to control the robot
 ```
 
-You can prioritize steering over turning, or vice versa. For example, you could fully prioritize steering so that the angular velocity of the robot is guaranteed to be the same for a given steering input, no matter the throttle input. With LemLib, you can prioritize steering over throttle by a set amount, from 0 to 1. 0.5 is the default, where steering and turning have the same priority. 0 fully prioritizes throttle, while 1 fully prioritizes steering. See the code block below:
+You can prioritize steering over turning, or vice versa. For example, you could fully prioritize steering so that the angular velocity of the robot is guaranteed to be the same for a given steering input, no matter the throttle input. With DDX, you can prioritize steering over throttle by a set amount, from 0 to 1. 0.5 is the default, where steering and turning have the same priority. 0 fully prioritizes throttle, while 1 fully prioritizes steering. See the code block below:
 
 ```cpp
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
@@ -176,19 +176,19 @@ Instead of the regular linear relationship between controller input and drivetra
 
 ```cpp
 // input curve for throttle input during driver control
-lemlib::ExpoDriveCurve throttle_curve(3, // joystick deadband out of 127
+ddx::ExpoDriveCurve throttle_curve(3, // joystick deadband out of 127
                                      10, // minimum output where drivetrain will move out of 127
                                      1.019 // expo curve gain
 );
 
 // input curve for steer input during driver control
-lemlib::ExpoDriveCurve steer_curve(3, // joystick deadband out of 127
+ddx::ExpoDriveCurve steer_curve(3, // joystick deadband out of 127
                                   10, // minimum output where drivetrain will move out of 127
                                   1.019 // expo curve gain
 );
 
 // create the chassis
-lemlib::Chassis chassis(drivetrain,
+ddx::Chassis chassis(drivetrain,
                         lateral_controller,
                         angular_controller,
                         sensors,

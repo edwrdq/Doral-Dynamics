@@ -1,0 +1,9 @@
+/* Optional tweaks in addition to Furo brand variables */
+:root {
+  --color-brand-primary: #cc241d;
+  --color-brand-content: #cc241d;
+}
+
+a, .toc-tree .reference {
+  color: var(--color-brand-content);
+}

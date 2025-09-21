@@ -1,4 +1,7 @@
 breathe
+sphinx
+myst-parser
+sphinx-copybutton
 myst-parser
 furo
 sphinx-copybutton

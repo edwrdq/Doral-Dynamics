@@ -47,7 +47,7 @@ Once the error is below `earlyExitRange`, the motion will automatically exit and
 ```cpp
 void intakeBall() {
     chassis.setPose(0, 0, 0);
-    lemlib::Pose intakeBallTarget(0, 24);
+    ddx::Pose intakeBallTarget(0, 24);
 
     // spin intake
     intake();

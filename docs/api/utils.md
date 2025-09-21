@@ -2,38 +2,38 @@
 
 ## Timer
 
-```{doxygenclass} lemlib::Timer
+```{doxygenclass} ddx::Timer
 :members:
 ```
 
 ## PID
 
-```{doxygenclass} lemlib::PID
+```{doxygenclass} ddx::PID
 :members:
 ```
 
 ## Misc
 
-```{doxygenfunction} lemlib::slew
+```{doxygenfunction} ddx::slew
 ```
 
-```{doxygenfunction} lemlib::radToDeg
+```{doxygenfunction} ddx::radToDeg
 ```
 
-```{doxygenfunction} lemlib::degToRad
+```{doxygenfunction} ddx::degToRad
 ```
 
-```{doxygenfunction} lemlib::sanitizeAngle
+```{doxygenfunction} ddx::sanitizeAngle
 ```
 
-```{doxygenfunction} lemlib::angleError
+```{doxygenfunction} ddx::angleError
 ```
 
-```{doxygenfunction} lemlib::avg
+```{doxygenfunction} ddx::avg
 ```
 
-```{doxygenfunction} lemlib::ema
+```{doxygenfunction} ddx::ema
 ```
 
-```{doxygenfunction} lemlib::getCurvature
+```{doxygenfunction} ddx::getCurvature
 ```

@@ -2,7 +2,7 @@
 
 #include "units/Angle.hpp"
 
-namespace lemlib {
+namespace ddx {
 /**
  * @brief abstract class for encoders
  *
@@ -83,4 +83,4 @@ class Encoder {
         virtual int setAngle(Angle angle) = 0;
         virtual ~Encoder() = default;
 };
-} // namespace lemlib
+} // namespace ddx

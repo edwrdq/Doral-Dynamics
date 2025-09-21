@@ -25,7 +25,7 @@ EXCLUDE_COLD_LIBRARIES:=
 
 # Set this to 1 to add additional rules to compile your project as a PROS library template
 IS_LIBRARY:=1
-LIBNAME:=LemLib
+LIBNAME:=DDX
 VERSION:=0.6.0
 
 # EXCLUDE_SRC_FROM_LIB= $(SRCDIR)/unpublishedfile.c
@@ -36,7 +36,15 @@ EXCLUDE_SRC_FROM_LIB+=$(foreach file, $(SRCDIR)/main,$(foreach cext,$(CEXTS),$(f
 # whatever files you want here. This line is configured to add all header files
 # that are in the the include directory get exported
 
-TEMPLATE_FILES=$(INCDIR)/units/*.hpp $(INCDIR)/lemlib/chassis/differential/*.hpp $(INCDIR)/lemlib/chassis/differential/motions/*.hpp
+# Headers to export with the library
+# Keep globs shallow to avoid relying on bash globstar
+TEMPLATE_FILES=\
+  $(INCDIR)/units/*.hpp \
+  $(INCDIR)/ddx/*.hpp $(INCDIR)/ddx/*/*.hpp \
+  $(INCDIR)/hardware/*.hpp $(INCDIR)/hardware/*/*.hpp \
+  $(INCDIR)/hot-cold-asset/*.hpp \
+  $(INCDIR)/lemlog/*.hpp $(INCDIR)/lemlog/*/*.hpp \
+  $(INCDIR)/LemLog/*.hpp $(INCDIR)/LemLog/*/*.hpp
 
 .DEFAULT_GOAL=quick
 
